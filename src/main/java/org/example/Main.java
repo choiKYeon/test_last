@@ -1,7 +1,23 @@
-package org.example; // 이 부분은 아직 모르셔도 됩니다.
+package org.example; // 공유를 위한 용도
 
-public class Main {
+// 문제 : `a무기.공격();` 가 실행되는 세부과정을 자세히 쓰세요.
+
+class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        무기 a무기 = new 칼();
+
+        //a무기에 칼을 담는다.
+        //무기라는 클래스보다 칼이 더 작기 떄문에 담긴다.
+        //하지만 무기라는 클래스 안에 칼이 담길 때,
+        //공격이라는 버튼이 없어진 상태로 담긴다.
+        //공격이라는 버튼을 실행하기 위해서는 무기라는 클래스 안에 담아야 한다.
+        //ex ) class 무기 {
+        //    void 공격() {
+        //
+        //    }
+        //}
+        a무기.공격();
     }
 }
+
+
