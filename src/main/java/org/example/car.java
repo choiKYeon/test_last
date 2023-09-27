@@ -1,10 +1,14 @@
 package org.example;
 
-class 사람{
-    사람(){
-        System.out.println("사람이 태어났습니다.");
-    }
-    사람(int a){
-        System.out.println("태어나서부터" + a + "살인 사람이 태어났습니다.");
+class 계산기 {
+    static int 곱셈(int a, int b) throws ArithmeticException {
+        try{
+            if( a* b == 0)
+                throw new ArithmeticException();
+        }catch (ArithmeticException e){
+            System.out.println("곱셈은 답이될 수 없습니다.");
+
+        }
+        return 0;
     }
 }
