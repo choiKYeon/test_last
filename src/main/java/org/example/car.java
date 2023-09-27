@@ -6,8 +6,8 @@ class 계산기 {
             if( a* b == 0)
                 throw new ArithmeticException();
         }catch (ArithmeticException e){
-            System.out.println("곱셈은 답이될 수 없습니다.");
 
+            System.out.println("곱셈은 답이될 수 없습니다.");
         }
         return 0;
     }

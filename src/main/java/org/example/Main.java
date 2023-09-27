@@ -1,21 +1,41 @@
 package org.example; // 공유를 위한 용도
 
+import java.util.Scanner;
+
 class Main {
     public static void main(String[] args) {
-        int[] datas = new int[2];
+        Scanner scan = new Scanner(System.in);
+        int age;
+        age = 20;
+        while(true){
 
-        try {
-            work(datas);
-        } catch (ArrayIndexOutOfBoundsException e) { // main 함수 입장에서 이 코드는 가독성이 떨어진다.
-            System.out.println("이런.. 오류가 발생했군요.");
-        }
-    }
+           try{ System.out.printf("나이를 입력하세요.");
+            age = scan.nextInt();
+            scan.nextLine();
 
-    static void work(int[] datas) {
-        for (int i = 0; i > datas.length; i++){
-            throw new ArrayIndexOutOfBoundsException();
+               if (age < 1){
+                   System.out.println("음수는 안됩니다.");
+               continue;
+               }
+           }catch(Exception e) {
+               scan.nextLine();
+               System.out.println("문자열은 안됩니다.");
+               continue;
+           }
+            break;
         }
-        System.out.println("잘 출력되었습니다.");
+
+
+        System.out.printf("키 를 입력하세요.");
+        int 키 = scan.nextInt();
+        scan.nextLine();
+
+        System.out.printf("이름 를 입력하세요.");
+        String name = scan.next();
+        scan.nextLine();
+
+        System.out.printf("나이는" + age + "살 입니다.");
+        System.out.printf(" " + 키 + "cm 이고요,");
+        System.out.printf(" " + name + "입니다.");
     }
 }
-//Exception
